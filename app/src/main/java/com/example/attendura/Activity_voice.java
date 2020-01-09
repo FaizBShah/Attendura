@@ -18,7 +18,7 @@ import java.util.Locale;
 public class Activity_voice extends AppCompatActivity {
 
     private SharedPreferenceConfig preferenceConfig;
-    private EditText FirstRoll, LastRoll;
+    private EditText First_Roll, Last_Roll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,8 @@ public class Activity_voice extends AppCompatActivity {
         Intent intent1 = getIntent();
 
         preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
-        FirstRoll = findViewById(R.id.first_roll_no_);
-        LastRoll = findViewById(R.id.last_roll_no_);
+        First_Roll = findViewById(R.id.first_roll_no_);
+        Last_Roll = findViewById(R.id.last_roll_no_);
 
         if(preferenceConfig.readLogInStatus())
         {
@@ -39,6 +39,10 @@ public class Activity_voice extends AppCompatActivity {
 
     public void SaveChanges(View view)
     {
+        int first_roll = Integer.parseInt(First_Roll.getText().toString());
+        int last_roll = Integer.parseInt(Last_Roll.getText().toString());
+
+        preferenceConfig.writeRoll(first_roll,last_roll);
         preferenceConfig.writeLogInStatus(true);
         startActivity(new Intent(this,Take_Activity.class));
         finish();

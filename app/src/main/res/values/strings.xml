@@ -4,5 +4,7 @@
     <string name="Log_Button">Attendance Log</string>
     <string name="Finder_Button">Attendance Search</string>
     <string name="Credit_Btn">Credits</string>
-    <string name="Menu_Input">User Inputs</string>
+    <string name="Menu_Input">Settings</string>
+    <string name="login_preference">com.example.attendura_login_preference</string>
+    <string name="login_status">com.example.attendura_login_status_preference</string>
 </resources>

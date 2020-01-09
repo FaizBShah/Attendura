@@ -6,29 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".Activity_voice">
 
-    <ImageButton
-        android:id="@+id/voiceButton"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@null"
-        android:contentDescription="TODO"
-        android:onClick="speak"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/first_roll_no."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Enter First Roll No."
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_mic" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/mtextView"
-        android:layout_width="0dp"
+    <EditText
+        android:id="@+id/last_roll_no."
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:ems="10"
+        android:hint="Enter last Roll No."
+        android:inputType="none|number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text='"Press mic button to input voice..."' />
+        app:layout_constraintTop_toBottomOf="@+id/first_roll_no." />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="SaveChanges"
+        android:text="Save Changes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_roll_no." />
 </androidx.constraintlayout.widget.ConstraintLayout>

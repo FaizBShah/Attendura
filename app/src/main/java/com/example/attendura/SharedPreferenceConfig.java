@@ -13,10 +13,6 @@ public class SharedPreferenceConfig {
         sharedPreferences = context.getSharedPreferences(context.getResources().getString(R.string.login_preference), Context.MODE_PRIVATE);
     }
 
-    public SharedPreferenceConfig()
-    {
-    }
-
     public void writeLogInStatus(boolean status)
     {
         SharedPreferences.Editor editor = sharedPreferences.edit();

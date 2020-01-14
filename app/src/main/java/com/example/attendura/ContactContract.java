@@ -8,12 +8,11 @@ public class ContactContract
     {
     }
 
-    public static class ContactEntry extends SharedPreferenceConfig
+    public static class ContactEntry
     {
-        int getF_roll = super.readFirstRoll();
-        int getL_roll = super.readLastRoll();
-
         public static final String TABLE_NAME = "contact_info";
         public static final String CONTACT_DATE = "date";
+        public static final String ROLL_NUMBER = "roll_no";
+        public static final String ATTENDANCE = "attendance";
     }
 }

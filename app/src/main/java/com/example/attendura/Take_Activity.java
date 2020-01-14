@@ -51,6 +51,7 @@ public class Take_Activity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.change_menu_item:
                 Intent intent = new Intent(this,Activity_voice.class);
+                preferenceConfig.writeLogInStatus(false);
                 startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
